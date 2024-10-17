@@ -11,7 +11,7 @@ Before you get started, ensure you have the following prerequisites installed:
 - [virtualenv](https://pypi.org/project/virtualenv/)
 - [Git](https://git-scm.com/)
 - [node/Npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-
+s
 ## Getting Started
 
 Follow these step-by-step instructions to set up and run the project:

@@ -1,0 +1,5 @@
+type Query {
+  listProducts(productName: String): [ProductsCVE]
+  listCVEDetails(cve: String): [CVEDetails]
+  listEPSS(cve: String): [EPSS]
+}

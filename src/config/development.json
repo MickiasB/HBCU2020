@@ -1,0 +1,17 @@
+{
+    "general": {
+      "region": "us-west-2"
+    },
+    "services": [
+      {
+        "name": "EPSS",
+        "epssURL": "param-store:/HBCU/epsURL",
+        "cveURL": "param-store:/HBCU/cveURL",
+        "s3": {
+            "env": "dev",
+            "Bucket": "hbcu-2020"
+        }
+      }
+    ]
+  }
+

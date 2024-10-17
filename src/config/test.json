@@ -1,0 +1,20 @@
+{
+    "general": {
+      "region": "us-west-2"
+    },
+    "services": [
+      {
+        "name": "EPSS",
+        "epssURL": "param-store:/HBCU/epsURL",
+        "cveURL": "param-store:/HBCU/cveURL",
+        "s3": {
+            "env": "local",
+            "Bucket": "hbcu-2020",
+            "locals3_url": "localhost:9000",
+            "minio_access_key": "admin",
+            "minio_secret_key": "password",
+            "region": "us-east-2"
+        }
+      }
+    ]
+  }

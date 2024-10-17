@@ -1,0 +1,6 @@
+type EPSS {
+  cve: String
+  percentile: String
+  epss: String
+  date: String
+}

@@ -1,0 +1,23 @@
+{
+    "general": {
+      "endpointURL": "https://dynamodb.us-west-2.amazonaws.com",
+      "useCloudWatchMetrics": true,
+      "provisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+      },
+      "region": "us-west-2",
+      "sseSpecification": {
+        "Enabled": true,
+        "SSEType": "KMS"
+      },
+      "tags": [
+            { "Key": "adsk:family", "Value": "Engineering Practice" },
+            { "Key": "adsk:environment", "Value": "Development" }
+        ],
+      "tokenCacheExpiration": "3599",
+      "publicKeyExpiration": "365",
+      "authorizedAppExpiration": "30"
+    }
+  }
+  

@@ -1,0 +1,31 @@
+{
+    "tables": { 
+       "SampleTable": {
+          "keySchema": [
+            { "AttributeName": "hashKey", "KeyType": "HASH" },
+            { "AttributeName": "sortKey", "KeyType": "RANGE" }
+          ],
+          "attributeDefinitions": [
+            { "AttributeName": "hashKey", "AttributeType": "S" },
+            { "AttributeName": "sortKey", "AttributeType": "S" }
+          ],
+          "globalSecondaryIndexes": [
+            {
+              "IndexName": "AssessmentBySourceIndex",
+              "KeySchema": [
+                { "AttributeName": "sortKey", "KeyType": "HASH" }
+              ],
+              "Projection": {
+                "ProjectionType": "ALL"
+              },
+              "ProvisionedThroughput": {
+                "ReadCapacityUnits": 10,
+                "WriteCapacityUnits": 10
+              }
+            }
+          ]
+       }
+    }
+    
+  }
+  

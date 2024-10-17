@@ -1,0 +1,8 @@
+.venv
+.env
+.DS_Store
+__pycache__
+localstack/
+sample/
+test/
+somedir/

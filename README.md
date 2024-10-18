@@ -74,16 +74,16 @@ make dynamodb-admin
 ```
 This sets up the dynamodb GUI for you to play with the data. Once you run this command, you will see a link in the terminal (NOTE: use the alternate link, not the first one----[http://0.0.0.0:8001](http://0.0.0.0:8001)), click on it and you will be able to see the GUI.
 
-- Once you run **Step 6**, you can refresh the page and you will see the tables that are created in the dynamodb. You can click on the table and see the data that is loaded in the table. You can play with data by doing multiple queries and see how the data is stored in the dynamodb.
+- Once you run ***Step 6***, you can refresh the page and you will see the tables that are created in the dynamodb. You can click on the table and see the data that is loaded in the table. You can play with data by doing multiple queries and see how the data is stored in the dynamodb.
 
-For example, for **Sample Table**, pick Query option (you can find it  on the top left corner of the table) and Index on AssessmentBySourceIndex: sortkey option and put "product#cve" value for the sortKey. This will show you all the data stored with sortKey as "product#cve"--shows you list of all products stored and list of vulnerabilities that each products have. If you want to query for a specific row then you should change on what you're indexing on and query by the Hash Key
+For example, for _Sample Table_, pick Query option (you can find it  on the top left corner of the table) and Index on AssessmentBySourceIndex: sortkey option and put "product#cve" value for the sortKey. This will show you all the data stored with sortKey as "product#cve"--shows you list of all products stored and list of vulnerabilities that each products have. If you want to query for a specific row then you should change on what you're indexing on and query by the Hash Key
 
 ![Local Dynamodb GUI--Sample Table](docs/dynamo.png)
 
 For the Sample Table, the list of sortKeys are as follows:
-- __product#cve__
-- __cve#details__
-- __cve#epss__
+- _product#cve_
+- _cve#details_
+- _cve#epss_
 
 
 
@@ -130,8 +130,8 @@ make graphql
 src/api/schemas folder contains the schema and the schema is segregated basically in accordance with the type of data you want to see.
 
 - List of all the APIs that you can run (You can find them in the src/api/schemas/schema.graphql file):
-  - __listProducts__: Lists all the products stored in the dynamodb with each product having a list of vulnerabilities.
-  - __listCVEDetails__: Lists all the vulnerabilities stored in the dynamodb with each vulnerability showing their CVE details.
-  - __listEPSS__: Lists all the vulnerabilities stored in the dynamodb with each vulnerability showing their EPSS details.
+  - ***listProducts***: Lists all the products stored in the dynamodb with each product having a list of vulnerabilities.
+  - ***listCVEDetails***: Lists all the vulnerabilities stored in the dynamodb with each vulnerability showing their CVE details.
+  - ***listEPSS***: Lists all the vulnerabilities stored in the dynamodb with each vulnerability showing their EPSS details.
 
   

@@ -69,9 +69,7 @@ def store_in_dynamodb(vuln_data, metadata_table):
     """
     Store vulnerability data in DynamoDB
     """
-    # metadata_table.big_batch_put(vuln_data, batch_size=1000, max_workers=10)
-    for i in vuln_data:
-        metadata_table.put_item(i)
+    metadata_table.big_batch_put(vuln_data, batch_size=1000, max_workers=10)
     
 
 def insert_vulnerability_data():

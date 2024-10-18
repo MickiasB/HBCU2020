@@ -1,3 +1,4 @@
+import os
 import pathlib
 from ariadne.asgi import GraphQL
 from ariadne import QueryType, make_executable_schema, load_schema_from_path
@@ -11,7 +12,7 @@ query = QueryType()
 
 @query.field("listProducts")
 def listProducts(_, info, productName=None):
-    config = DynamoDBConfig(config="tables")
+    config = DynamoDBConfig(os.environ.get("CONFIG", "test"))
     cve_table = DynamoDB(config.get_config(), "SampleTable")
     results = []
     if productName:
@@ -36,7 +37,7 @@ def listProducts(_, info, productName=None):
 
 @query.field("listCVEDetails")
 def listCVEDetails(_, info, cve=None):
-    config = DynamoDBConfig(config="tables")
+    config = DynamoDBConfig(os.environ.get("CONFIG", "test"))
     cve_table = DynamoDB(config.get_config(), "SampleTable")
     results = []
     if cve:
@@ -60,7 +61,7 @@ def listCVEDetails(_, info, cve=None):
 
 @query.field("listEPSS")
 def listEPSS(_, info, cve=None):
-    config = DynamoDBConfig(config="tables")
+    config = DynamoDBConfig(os.environ.get("CONFIG", "test"))
     cve_table = DynamoDB(config.get_config(), "SampleTable")
     results = []
     if cve:

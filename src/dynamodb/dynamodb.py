@@ -35,10 +35,6 @@ class DynamoDB:
     def __init__(self, config, table_name, full=True):
         self.config = config
         self.table_name = table_name
-        # session = boto3.Session(
-        #         aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
-        #         aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
-        #         region_name=os.getenv('AWS_REGION'))
         session = boto3.Session(region_name=config['general']['region'])
         self.resource = session.resource('dynamodb', endpoint_url=self.config['general']['endpointURL'])
         if self.resource is None:
@@ -268,7 +264,6 @@ class DynamoDBConfig:
         file_name = config + ".json"
         tables_config = "tables.json"
         config_file = os.path.join(script_dir, file_name)
-
         with open(config_file, "r", encoding="utf-8") as json_file:
             self.config_general = json.load(json_file)
         with open(os.path.join(script_dir, tables_config), "r", encoding="utf-8") as tables_file:
